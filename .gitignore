@@ -1,0 +1,21 @@
+# Mac OSX extra tracking
+.DS_Store
+
+# Microsoft Visual Studio Code and its plugins
+.vscode
+jsconfig.json
+.eslintrc.json
+
+# Miscellaneous (created as part of the build process?)
+/plugins/
+/platforms/
+.project
+.settings
+
+# Node modules -- npm packages
+/node_modules/
+npm-debug.log
+
+# Recreated from config.xml in Cordova >= 7.x
+/package.json
+/package-lock.json
