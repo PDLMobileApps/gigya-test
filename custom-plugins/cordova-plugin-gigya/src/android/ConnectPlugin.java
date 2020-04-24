@@ -12,6 +12,8 @@ import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import sun.security.jgss.spi.GSSNameSpi;
+
 
 public class ConnectPlugin extends CordovaPlugin {
 
@@ -19,6 +21,10 @@ public class ConnectPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
         if (action.equals("init")) {
             executeInit(args);
+            return true;
+        }
+        if (action.equals("obfuscate")) {
+            obfuscate(args);
             return true;
         }
         if (action.equals("registerToGlobalEvents")) {
@@ -54,6 +60,12 @@ public class ConnectPlugin extends CordovaPlugin {
         GSAPI.getInstance().initialize(cordova.getActivity().getApplicationContext(), apiKey, apiDomain);
     }
 
+    private void obfuscate(JSONArray args) throws JSONException {
+        boolean enable = args.getBoolean(0);
+        
+        GSAPI.OPTION_OBFUSCATION_ENABLED = true;
+    }
+ 
     private void executeSendRequest(JSONArray args, final CallbackContext callbackContext) throws JSONException {
         String method = args.getString(0);
         GSObject params = getGSObjectFromJSONString(args.getString(1));

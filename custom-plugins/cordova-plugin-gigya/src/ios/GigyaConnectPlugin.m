@@ -21,6 +21,11 @@
     [Gigya initWithAPIKey:apiKey application:[UIApplication sharedApplication] launchOptions:nil APIDomain:apiDomain];
 }
 
+- (void)obfuscate:(CDVInvokedUrlCommand *)command
+{
+    
+}
+
 - (void)registerToGlobalEvents:(CDVInvokedUrlCommand *)command
 {
     self.globalEventsCallbackId = command.callbackId;

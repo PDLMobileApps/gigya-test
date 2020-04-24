@@ -34,6 +34,8 @@
         <variable name="APP_ID" value="626108487583023" />
         <variable name="APP_NAME" value="Gigya test App" />
     </plugin>
+    <plugin name="cordova-plugin-wkwebview-engine" spec="1.2.1" />
+    <plugin name="cordova-plugin-wkwebview-file-xhr" spec="2.1.4" />
     <plugin name="cordova-plugin-gigya" spec="custom-plugins/cordova-plugin-gigya">
         <variable name="GOOGLE_IOS_CLIENT_ID" value="10464331611-3jktvsc8bhto2ufoknq25cs1om7251qe.apps.googleusercontent.com" />
     </plugin>

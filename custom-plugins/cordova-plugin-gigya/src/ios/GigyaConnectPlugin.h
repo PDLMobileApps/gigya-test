@@ -7,6 +7,8 @@
 
 - (void)init:(CDVInvokedUrlCommand *)command;
 
+- (void)obfuscate:(CDVInvokedUrlCommand *)command;
+
 - (void)registerToGlobalEvents:(CDVInvokedUrlCommand *)command;
 
 - (void)sendRequest:(CDVInvokedUrlCommand *)command;

@@ -1358,6 +1358,18 @@ function init(apiKey, apiDomain) {
     cordova.exec(null, null, 'GigyaConnectPlugin', 'init', [apiKey, apiDomain]);
 }
 exports.init = init;
+
+/**
+ * Obfuscate web bridge data when using screensets communications.
+ * This is only affect for the Android platform.
+ * 
+ * @param {boolean} value 
+ */
+function obfuscate(value) {
+    cordova.exec(null, null, 'GigyaConnectPlugin', 'obfuscate', [value]);
+}
+exports.obfuscate = obfuscate
+
 /**
  * Sends a request to Gigya server. This method is used for invoking any of the methods supported by Gigya's <a target="_blank" href="http://developers.gigya.com/display/GD/REST+API">REST API</a>.
  *

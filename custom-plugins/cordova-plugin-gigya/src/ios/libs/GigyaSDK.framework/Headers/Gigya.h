@@ -22,8 +22,7 @@
 // External SDKs
 #if defined(__has_include)
 
-#if __has_include(<Bolts/Bolts.h>) && __has_include(<FBSDKCoreKit/FBSDKCoreKit.h>) && __has_include(<FBSDKLoginKit/FBSDKLoginKit.h>)
-#import <Bolts/Bolts.h>
+#if __has_include(<FBSDKCoreKit/FBSDKCoreKit.h>) && __has_include(<FBSDKLoginKit/FBSDKLoginKit.h>)
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #endif
@@ -38,7 +37,7 @@
 #endif
 
 // Consts
-static NSString * _Nonnull const GSGigyaSDKVersion = @"iOS_3.7.1";
+static NSString * _Nonnull const GSGigyaSDKVersion = @"iOS_3.7.5";
 static NSString * _Nonnull const GSDefaultAPIDomain = @"us1.gigya.com";
 static NSString * _Nonnull const GSGigyaSDKDomain = @"com.gigya.GigyaSDK";
 static NSString * _Nonnull const GSInvalidOperationException = @"com.gigya.GigyaSDK:InvalidOperationException";
@@ -183,6 +182,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setSession:(GSSession * _Nullable)session;
 
 + (void)setKeyStoreTimeout:(int)timeout;
+
++ (void)keyChainAttrAccessible:(CFStringRef)value;
 
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 + (id<GSSessionDelegate>)sessionDelegate;
