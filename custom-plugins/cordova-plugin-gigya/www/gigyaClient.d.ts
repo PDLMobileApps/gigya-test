@@ -18,6 +18,13 @@ declare module gigyaClient {
     function init(apiKey:string, apiDomain:string):void;
 
     /**
+    * Obfuscate web bridge data when using screensets communications.
+    * This is only affect for the Android platform.
+    * @param {boolean}  value  True if to obfuscate web bridge data.
+    */
+    function obfuscate(value:boolean):void;
+
+    /**
      * Sends a request to Gigya server. This method is used for invoking any of the methods supported by Gigya's <a target="_blank" href="http://developers.gigya.com/display/GD/REST+API">REST API</a>.
      *
      * @param {string}  APIMethod        The Gigya API method to call, including namespace. For example: "socialize.getUserInfo". Please refer to our <a target="_blank" href="http://developers.gigya.com/display/GD/REST+API" >REST API reference</a> for the list of available methods.

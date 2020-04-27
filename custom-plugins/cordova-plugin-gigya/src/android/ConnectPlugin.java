@@ -12,8 +12,6 @@ import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import sun.security.jgss.spi.GSSNameSpi;
-
 
 public class ConnectPlugin extends CordovaPlugin {
 

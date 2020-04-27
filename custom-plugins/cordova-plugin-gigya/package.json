@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-gigya",
-  "version": "3.6.4",
+  "version": "3.6.5",
   "description": "Gigya SDK for CordovaJS =================================== The CordovaJS SDK provides an interface for the Gigya API",
   "cordova": {
     "id": "cordova-plugin-gigya",
